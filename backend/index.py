@@ -15,11 +15,12 @@ CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 JWT_SECRET = "super-secret-change-this"
 JWT_ALGO = "HS256"
 
+
+
 engine = create_engine(
-    "mysql+pymysql://root:@localhost/quantum",
+    "mysql+pymysql://root:solo@localhost/quantum",
     future=True
 )
-
 # ================= PQC CONFIG =================
 KEM_ALGO = "ML-KEM-768"
 kem_sessions = {}
